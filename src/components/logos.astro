@@ -1,0 +1,46 @@
+---
+// @ts-ignore
+import { Image } from "@astrojs/image/components";
+import ford from "../assets/brands/ford.png";
+import toyota from "../assets/brands/toyotoa.webp";
+import dodge from "../assets/brands/dodge.webp";
+import chrysler from "../assets/brands/chrysler.webp";
+import chevy from "../assets/brands/chevy.webp";
+import hyundai from "../assets/brands/hyundai.webp";
+
+const carLogos = [
+  {
+    name: ford,
+  },
+  {
+    name: toyota,
+  },
+  {
+    name: dodge,
+  },
+  {
+    name: chrysler,
+  },
+  {
+    name: chevy,
+  },
+  {
+    name: hyundai,
+  },
+];
+---
+
+<div class="mt-24">
+  <h2 class="text-center text-slate-500">
+    We cover all OEM's from Acura to Volvo
+  </h2>
+  <div class="grid grid-cols-6 gap-4 bg-white">
+    {
+      carLogos.map((logo) => (
+        <div class="flex justify-center items-center">
+          <Image src={logo.name} alt="car logo" />
+        </div>
+      ))
+    }
+  </div>
+</div>

@@ -1,0 +1,31 @@
+---
+import { Picture } from "@astrojs/image/components";
+import heroImage from "assets/hero.png";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon";
+import Contactform from "@components/contactform.astro";
+import video from "../assets/scott-testimonial.mp4";
+---
+
+<main
+  class="grid lg:grid-cols-2 gap-5 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  <div class="py-6 md:order-1 md:block">
+    <video controls>
+      <source src={video} type="video/mp4" />
+    </video>
+  </div>
+  <div>
+    <h1
+      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+      Sell More Cars
+    </h1>
+
+    <p class="text-lg mt-4 text-slate-600 max-w-xl">
+      Automotive Videos that Drive More Leads & Sales to your Dealership. Boost
+      sales on your SRPs, VDPs with on-the-road video test drives.
+      <wbr />
+      WheelsTV drives leads and sales to your dealership.
+    </p>
+    <Contactform />
+  </div>
+</main>

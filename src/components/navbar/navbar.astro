@@ -1,0 +1,16 @@
+---
+import { Image } from "@astrojs/image/components";
+import Container from "@components/container.astro";
+import { Astronav } from "astro-navbar";
+import logo from '../../assets/WHEELSTV-Logo.webp'
+
+
+---
+
+<Container>
+  <header class="py-6 grid grid-cols-4 gap-2"> 
+    <div class="flex justify-center items-center">
+      <Image src={logo} alt="test" />
+    </div>
+  </header>
+</Container>
