@@ -6,6 +6,10 @@ import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   site: "https://astroship.web3templates.com",
+  server: {
+    port: 3111,
+    host: true,
+  },
   integrations: [
     tailwind(),
     image({
