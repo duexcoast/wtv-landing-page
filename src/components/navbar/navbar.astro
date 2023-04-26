@@ -2,15 +2,36 @@
 import { Image } from "@astrojs/image/components";
 import Container from "@components/container.astro";
 import { Astronav } from "astro-navbar";
-import logo from '../../assets/WHEELSTV-Logo.webp'
-
-
+import logo from "../../assets/WHEELSTV-Logo.webp";
+import Button from "@components/ui/button.astro";
 ---
 
+<script>
+  console.log("testing this out");
+
+  const button = document.getElementById("schedule");
+  const formInput = document.getElementById("name");
+
+  button.addEventListener("click", () => {
+    formInput.focus();
+    console.log("test");
+  });
+</script>
+
 <Container>
-  <header class="py-6 grid grid-cols-4 gap-2"> 
-    <div class="flex justify-center items-center">
+  <!-- <header class="py-6 grid grid-cols-4 gap-2">  -->
+  <header class="bg-white py-6 flex flex-wrap justify-between items-center">
+    <!-- <div class="flex justify-center items-center"> -->
+    <div class="w-1/2 lg:w-1/4">
       <Image src={logo} alt="test" />
+    </div>
+    <div>
+      <Button
+        id="schedule"
+        class="bg-red-500 hover:bg-black"
+        onclick="focusForm">
+        Schedule A Demo!
+      </Button>
     </div>
   </header>
 </Container>

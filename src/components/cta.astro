@@ -2,6 +2,16 @@
 import Link from "./ui/link.astro";
 ---
 
+<script>
+  const button = document.getElementById("get-started");
+  const form = document.getElementById("name");
+
+  button.addEventListener("click", () => {
+    form.focus();
+    console.log("clicked");
+  });
+</script>
+
 <div
   class="bg-black p-8 md:px-20 md:py-20 mt-20 mx-auto max-w-5xl rounded-lg flex flex-col items-center text-center">
   <h2 class="text-white text-4xl md:text-6xl tracking-tight">
@@ -14,6 +24,11 @@ import Link from "./ui/link.astro";
     amet, qui minim labore adipisicing minim sint cillum sint consectetur
   </p>
   <div class="flex mt-5">
-    <Link href="#" style="inverted">Get Started</Link>
+    <Link
+      id="get-started"
+      class="hover:cursor-pointer hover:bg-red-500 hover:text-white"
+      style="inverted">
+      Get Started
+    </Link>
   </div>
 </div>
